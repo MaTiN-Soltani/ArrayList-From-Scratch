@@ -24,10 +24,7 @@ public class MyArrayList {
         {
             grow(1);
         }
-        else
-        {
             this.items[actSize++] = obj;
-        }
     }
 
     public int size()
