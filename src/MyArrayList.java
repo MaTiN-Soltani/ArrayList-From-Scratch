@@ -34,8 +34,8 @@ public class MyArrayList {
 
     private void grow(int amount)
     {
-        Object[] newarray = new Object[items.length+amount];
-        for (int i=0; i!=items.length; i++)
+        Object[] newarray = new Object[items.length + amount];
+        for (int i = 0; i < items.length; i++)
         {
             newarray[i] = items[i];
         }
