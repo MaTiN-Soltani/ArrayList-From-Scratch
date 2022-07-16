@@ -3,7 +3,7 @@ public class Main {
     {
         System.out.println("==============================================================");
         MyArrayList myList = new MyArrayList();
-        MyArrayList myList2 = new MyArrayList();
+        MyArrayList myList2 = new MyArrayList(2);
         MyArrayList myList3 = new MyArrayList();
 
         myList.add(1);
@@ -17,6 +17,7 @@ public class Main {
         myList3.add(1);
         myList3.add(2);
         myList3.add(3); 
+        myList3.add(4);
 
         for (int i = 0; i < myList.size(); i++) 
         {
@@ -31,12 +32,8 @@ public class Main {
         System.out.println("\nList size: " + myList.size());
 
         System.out.println("==============================================================");
-
-        myList.append(myList2);
-        for (int i = 0; i < myList.size(); i++) {
-            System.out.print(myList.get(i) + " ");
-        }
-        System.out.println("\nList size: " + myList.size());
+        
+        System.out.println(myList.compare(myList2));
 
         System.out.println("==============================================================");
     }

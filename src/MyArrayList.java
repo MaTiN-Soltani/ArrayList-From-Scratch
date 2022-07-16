@@ -22,7 +22,7 @@ public class MyArrayList {
     {
         if(items.length == actSize)
         {
-            grow(1);
+            grow(10);
         }
             this.items[actSize++] = obj;
     }
@@ -34,12 +34,12 @@ public class MyArrayList {
 
     private void grow(int amount)
     {
-        Object[] newarray = new Object[items.length + amount];
+        Object[] tempList = new Object[items.length + amount];
         for (int i = 0; i < items.length; i++)
         {
-            newarray[i] = items[i];
+            tempList[i] = this.get(i);
         }
-        items = newarray;
+        items = tempList;
     }
 //=======================================================================================
 
@@ -62,14 +62,16 @@ public class MyArrayList {
         {
             return false;
         }
-        for(int i = 0; i < this.size(); i++)
-        {
-            if(!(items[i].equals(myList2.get(i))))
+        else {
+            for(int i = 0; i < this.size(); i++)
             {
-                return false;
+                if(!(items[i].equals(myList2.get(i))))
+                {
+                    return false;
+                }
             }
+            return true;
         }
-        return true;
     }
   
     public void insert (int index, Object obj)
